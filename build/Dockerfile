@@ -55,7 +55,7 @@ ENV BUILDROOT="/root/rpmbuild"
 WORKDIR /usr/local/src
 
 # gcc 4.4.7
-COPY build/rpms .
+COPY build/rpms rpms
 RUN rpm -ivh --force rpms/*.rpm
 # ENV CXXFLAGS="-std=gnu++98"
 # RUN yum remove -y gcc gcc-c++ \

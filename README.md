@@ -1,3 +1,7 @@
 # centos8repo
 
-* tukiyo/centos8-devel : ベースイメージ
+* tukiyo3/centos8-build : ベースイメージ
+
+```sh
+docker pull tukiyo3/centos8-build
+```

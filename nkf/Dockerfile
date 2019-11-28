@@ -1,22 +1,8 @@
-FROM centos:8
-
-ENV BUILDROOT="/root/rpmbuild"
-
-RUN yum groupinstall -y "Development Tools" \
- && yum install -y -q epel-release \
- && yum install -y screen \
- && yum clean all
-
-# fpm
-RUN yum -y install ruby ruby-devel ruby-libs rubygems rpm-build \
- && yum clean all \
- && gem install fpm --no-rdoc --no-ri
-
-WORKDIR $BUILDROOT
+FROM tukiyo3/centos8-build
 
 COPY nkf-2.1.5.tar.gz .
 RUN tar xzf nkf-2.1.5.tar.gz
-WORKDIR $BUILDROOT/nkf-2.1.5
+WORKDIR /usr/local/src/nkf-2.1.5
 
 RUN make -s
 RUN make test

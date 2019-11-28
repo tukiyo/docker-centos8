@@ -1,7 +1,7 @@
 FROM centos:8
 
 RUN yum groupinstall -y "Development Tools" \
- && yum install -y -q epel-release \
+ && yum install -y --nogpgcheck epel-release \
  && yum install -y ruby ruby-devel ruby-libs rubygems rpm-build \
  && gem install fpm --no-rdoc --no-ri \
  && yum install -y \

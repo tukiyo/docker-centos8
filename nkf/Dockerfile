@@ -1,6 +1,6 @@
 FROM tukiyo3/centos8-build
 
-COPY nkf-2.1.5.tar.gz .
+COPY nkf/nkf-2.1.5.tar.gz .
 RUN tar xzf nkf-2.1.5.tar.gz
 WORKDIR /usr/local/src/nkf-2.1.5
 

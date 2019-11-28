@@ -56,7 +56,7 @@ WORKDIR /usr/local/src
 
 # gcc 4.4.7
 COPY rpms /usr/local/src
-RUN rpm -ivh --force rpms/*.rpm
+RUN rpm -ivh --force *.rpm && mkdir rpms && mv *.rpm rpms/
 # ENV CXXFLAGS="-std=gnu++98"
 # RUN yum remove -y gcc gcc-c++ \
 #  && update-alternatives \

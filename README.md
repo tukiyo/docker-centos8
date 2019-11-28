@@ -1,4 +1,4 @@
-# centos8repo
+# docker-centos8
 
 * tukiyo3/centos8-build : ベースイメージ
 

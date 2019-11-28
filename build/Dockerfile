@@ -2,6 +2,9 @@ FROM centos:8
 
 RUN yum groupinstall -y "Development Tools" \
  && yum install -y --nogpgcheck epel-release \
+ && sed -i -e 's/gpgcheck=1/gpgcheck=0/g' /etc/yum.repos.d/epel.repo \
+ && sed -i -e 's/gpgcheck=1/gpgcheck=0/g' /etc/yum.repos.d/epel-testing.repo \
+ && sed -i -e 's/gpgcheck=1/gpgcheck=0/g' /etc/yum.repos.d/epel-playground.repo \
  && yum install -y ruby ruby-devel ruby-libs rubygems rpm-build \
  && gem install fpm --no-rdoc --no-ri \
  && yum install -y \

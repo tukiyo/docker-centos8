@@ -15,6 +15,7 @@ RUN ninja install
 RUN fpm -s dir \
   -v $(date "+%Y%m%d")_3.6.0 \
   -t rpm \
+  -d fuse3-libs \
   -n local-sshfs \
   -p local-sshfs-3.6.0.el8.x86_64.rpm \
   -C /opt/sshfs \

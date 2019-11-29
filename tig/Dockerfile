@@ -8,9 +8,9 @@ RUN make install DESTDIR=/opt/tig
 RUN fpm -s dir \
   -v $(date "+%Y%m%d")_2.5.0.tig \
   -t rpm \
-  -n tig \
-  -p tig-2.5.0.el8.x86_64.rpm \
+  -n local-tig \
+  -p local-tig-2.5.0.el8.x86_64.rpm \
   -C /opt/tig \
-  --prefix / \
+  --prefix /usr/local \
   -a x86_64 \
   .

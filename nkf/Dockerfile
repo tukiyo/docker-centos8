@@ -12,9 +12,9 @@ RUN nkf --overwrite -w /usr/local/man/ja/man1/nkf.1
 RUN fpm -s dir \
   -v $(date "+%Y%m%d")_2.1.5 \
   -t rpm \
-  -n local-nkf \
-  -p local-nkf-2.1.5.el8.x86_64.rpm \
+  -n nkf \
+  -p nkf-2.1.5.el8.x86_64.rpm \
   -C /usr/local \
-  --prefix /usr/local \
+  --prefix / \
   -a x86_64 \
   bin/nkf man/ja/man1/nkf.1 man/man1/nkf.1

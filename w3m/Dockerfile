@@ -19,9 +19,9 @@ RUN fpm -s dir \
   -v $(date "+%Y%m%d")_0.5.3.git \
   -t rpm \
   -d "gc" \
-  -n local-w3m \
-  -p local-w3m-0.5.3.el8.x86_64.rpm \
+  -n w3m \
+  -p w3m-0.5.3.el8.x86_64.rpm \
   -C /opt/w3m \
-  --prefix /usr/local \
+  --prefix / \
   -a x86_64 \
   .

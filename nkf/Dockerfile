@@ -7,6 +7,8 @@ WORKDIR /usr/local/src/nkf-2.1.5
 RUN make -s
 RUN make test
 RUN make install
+# manの文字化け対応
+RUN nkf --overwrite -w /usr/local/man/ja/man1/nkf.1
 RUN fpm -s dir \
   -v $(date "+%Y%m%d")_2.1.5 \
   -t rpm \

@@ -6,4 +6,5 @@ export BUILD="docker build . --no-cache=false -f "
 # $BUILD w3m/Dockerfile -t tukiyo3/centos8-build:local-w3m
 # $BUILD tig/Dockerfile -t tukiyo3/centos8-build:local-tig
 # $BUILD ranger/Dockerfile -t tukiyo3/centos8-build:local-ranger
-$BUILD autossh/Dockerfile -t tukiyo3/centos8-build:local-autossh
+# $BUILD autossh/Dockerfile -t tukiyo3/centos8-build:local-autossh
+$BUILD sshfs/Dockerfile -t tukiyo3/centos8-build:local-sshfs

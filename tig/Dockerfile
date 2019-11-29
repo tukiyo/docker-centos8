@@ -10,7 +10,7 @@ RUN fpm -s dir \
   -t rpm \
   -n local-tig \
   -p local-tig-2.5.0.el8.x86_64.rpm \
-  -C /opt/tig \
-  --prefix /usr/local/root \
+  -C /opt/tig/root \
+  --prefix /usr/local \
   -a x86_64 \
   .

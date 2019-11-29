@@ -6,7 +6,7 @@ RUN make -s
 RUN make install DESTDIR=/opt/tig
 
 RUN fpm -s dir \
-  -v $(date "+%Y%m%d")_2.5.0.tig \
+  -v $(date "+%Y%m%d")_2.5.0.git \
   -t rpm \
   -n local-tig \
   -p local-tig-2.5.0.el8.x86_64.rpm \

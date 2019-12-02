@@ -9,5 +9,5 @@ export BUILD="docker build . --no-cache=false -f "
 # $BUILD autossh/Dockerfile -t tukiyo3/centos8-build:local-autossh
 # $BUILD sshfs/Dockerfile -t tukiyo3/centos8-build:local-sshfs
 # $BUILD eow/Dockerfile -t tukiyo3/centos8-build:opt-eow
-# $BUILD ndjbdns/Dockerfile -t tukiyo3/centos8-build:opt-ndjbdns
-$BUILD djbdns/Dockerfile -t tukiyo3/centos8-build:opt-djbdns
+# $BUILD djbdns/Dockerfile -t tukiyo3/centos8-build:opt-djbdns
+  $BUILD ndjbdns/Dockerfile -t tukiyo3/centos8-build:opt-ndjbdns

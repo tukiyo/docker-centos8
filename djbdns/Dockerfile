@@ -27,8 +27,10 @@ WORKDIR /usr/local/src/djbdns-1.05
 RUN echo "gcc -O2 -include /usr/include/errno.h" > conf-cc \
  && sed -i -e 's@/usr/local@/opt/djbtools@' conf-home \
  && make -s \
- && make setup check \
- && fpm -s dir \
+ && make setup check
+
+# rpm
+RUN fpm -s dir \
   -v $(date "+%Y%m%d")_1.05 \
   -t rpm \
   -n opt-djbdns \

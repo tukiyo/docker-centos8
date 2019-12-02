@@ -1,0 +1,19 @@
+FROM tukiyo3/centos8-build
+
+COPY ndjbdns/ndjbdns-1.06.tar.gz .
+RUN tar xzf ndjbdns-1.06.tar.gz
+WORKDIR /usr/local/src/ndjbdns-1.06
+
+RUN ./configure --prefix=/opt/ndjbdns-1.06
+RUN make -s
+RUN make install
+RUN (cd /opt && ln -s ndjbdns-1.06 djbtools)
+RUN fpm -s dir \
+  -v $(date "+%Y%m%d")_1.06 \
+  -t rpm \
+  -n opt-ndjbdns \
+  -p opt-ndjbdns-1.06.el8.x86_64.rpm \
+  -C /opt \
+  --prefix /opt \
+  -a x86_64 \
+  ndjbdns-1.06 djbtools

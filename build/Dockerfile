@@ -59,8 +59,7 @@ WORKDIR /usr/local/src
 COPY build/rpms rpms
 RUN rpm -ivh --force rpms/*.rpm
 # ENV CXXFLAGS="-std=gnu++98"
-# RUN yum remove -y gcc gcc-c++ \
-#  && update-alternatives \
+# RUN update-alternatives \
 #  --install /usr/bin/gcc gcc /usr/bin/gcc44 20 \
 #  --slave   /usr/bin/g++ g++ /usr/bin/g++44
 # ENV CC=/usr/bin/gcc44

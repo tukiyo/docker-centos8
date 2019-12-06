@@ -49,6 +49,7 @@ RUN yum groupinstall -y "Development Tools" \
   wget \
   which \
   zlib-devel \
+ && yum install --enablerepo=PowerTools -y --nogpgcheck libnsl2-devel \
  && yum clean all
 
 ENV BUILDROOT="/root/rpmbuild"

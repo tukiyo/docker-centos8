@@ -1,6 +1,6 @@
 export BUILD="docker build . --no-cache=false -f "
 
-$BUILD build/Dockerfile -t tukiyo3/centos8-build
+# $BUILD build/Dockerfile -t tukiyo3/centos8-build
 
 # $BUILD nkf/Dockerfile -t tukiyo3/centos8-build:local-nkf
 # $BUILD w3m/Dockerfile -t tukiyo3/centos8-build:local-w3m
@@ -11,3 +11,5 @@ $BUILD build/Dockerfile -t tukiyo3/centos8-build
 # $BUILD eow/Dockerfile -t tukiyo3/centos8-build:opt-eow
 # $BUILD djbdns/Dockerfile -t tukiyo3/centos8-build:opt-djbdns
 # $BUILD ndjbdns/Dockerfile -t tukiyo3/centos8-build:opt-ndjbdns
+
+$BUILD glibc/Dockerfile -t tukiyo3/centos8-build:opt-glibc

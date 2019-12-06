@@ -1,7 +1,6 @@
 FROM tukiyo3/centos8-build as el8nsl
 
 WORKDIR /usr/local/src/
-ENV CXXFLAGS="-std=gnu++98"
 
 RUN yum install --nogpgcheck -y libnsl
 

@@ -58,6 +58,14 @@ RUN yum install -y --nogpgcheck \
 ENV BUILDROOT="/root/rpmbuild"
 WORKDIR /usr/local/src
 
+
+# gcc 9
+RUN yum install -y gcc-toolset-9
+ENV CC="/opt/rh/gcc-toolset-9/root/usr/bin/gcc"
+ENV CXX="/opt/rh/gcc-toolset-9/root/usr/bin/g++"
+#ENV CXXFLAGS="-std=gnu++98"
+
+
 # gcc 4.4.7
 COPY build/rpms rpms
 RUN rpm -ivh --force rpms/*.rpm
